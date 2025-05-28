@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Flex';
+}
+html, body {
+    height: 100%;
+}
+body{
+    background-color: aliceblue;
+    font-size: 24px;
+    font-weight: bold;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+/*For the header section*/
+header{
+    background-color: #373737;
+    text-align: center;
+    padding: 10px 0px;
+}
+h1{
+    font-size: 38px;
+    color: #ebebeb;
+}
+/*For the main section with the inputs*/
+main{
+    max-width: 1000px;
+    padding: 0px 120px;
+    margin: auto;
+    background-color: #ebebeb;
+    margin-top: 15px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+h2{
+    font-size: 34px;
+    color: #007BFF;
+}
+/*Inputs*/
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"]{
+    padding: 16px;
+    margin: 18px 0;
+    font-size: 20px; 
+    width: 300px;
+    border: 1px solid #c5c3c3;
+    border-radius: 8px;
+    border: 1px solid black;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+::placeholder{
+    color: #007BFF;
+    font-weight: bold;
+    opacity: 0.5;
+}
+/*Checkbox and modifications*/
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0px 0 -20px 0; 
+}
+.custom-checkbox {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.custom-checkbox input[type="checkbox"] {
+    display: none;
+}
+.custom-checkbox .checkmark {
+    width: 24px;
+    height: 24px;
+    background-image: url('eye.png');
+    background-size: cover;
+    display: inline-block;
+    transition: background-image 0.3s;
+}
+.custom-checkbox input[type="checkbox"]:checked + .checkmark {
+    background-image: url('hide.png');
+}
+input[type="date"]{
+    padding: 16px;
+    margin: 20px 0;
+    font-size: 20px; 
+    color: #007BFF;
+    font-weight: bold;
+    width: 235px;
+    border: 1px solid #c5c3c3;
+    border-radius: 8px;
+    border: 1px solid black;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+input[type="text"]:hover,
+input[type="date"]:hover,
+input[type="email"]:hover,
+input[type="tel"]:hover,
+input[type="password"]:hover{
+    border: 1px solid #007BFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus{
+    border: 1px solid #007BFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+input[type="submit"] {
+    padding: 12px 120px;
+    font-size: 22px;
+    font-weight: 600;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 50px;
+    }
+input[type="submit"]:hover {
+    background-color: #0056b3;
+    color: #e2e2e2;
+    transform: scale(1.05);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+/*Footer section*/
+footer{
+    background-color: #373737;
+    padding: 10px 0px;
+    color: #ebebeb;
+    font-size: 12px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*Footer image*/
+footer img {
+    vertical-align: middle;
+    height: 24px; 
+    padding: 0px 7px;
+}
+footer a {
+    padding: 0px 7px;
+    text-decoration: none;
+    color: #007BFF;
+}
+@media (max-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+    main {
+        padding: 0 15px;
+        margin: 15px 10px;
+        width: auto;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"],
+    input[type="date"] {
+        width: 100%;
+        max-width: 100%;
+        font-size: 18px;
+        padding: 12px;
+        margin: 10px 0;
+    }
+    input[type="submit"] {
+        padding: 12px 40px;
+        font-size: 18px;
+        margin: 20px 0 40px;
+        width: 100%;
+        max-width: 100%;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    h2 {
+        font-size: 26px;
+    }
+    footer {
+        flex-direction: column;
+        font-size: 10px;
+        padding: 15px 5px;
+    }
+    footer img {
+        height: 20px;
+        padding: 5px 0;
+    }
+}

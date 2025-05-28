@@ -1,0 +1,47 @@
+<!-- My first project! -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mycss.css">
+    <script src="myjs.js"></script>
+    <title>Project1</title>
+</head>
+<body>
+    <header>
+        <h1>Enter your Info!</h1>
+    </header>
+    <main>
+        <h2>Personal Info:</h2>
+        <form action="" method="" name="infoForm" onsubmit="return validateForm()">
+            <!-- Input for the username -->
+            <input type="text" name="un" id="name" placeholder="Give your username:"><br>
+            <!-- Input for the password and the checkbox appear - disappear -->
+            <div class="password-container">
+                <input type="password" name="pass" id="pass" placeholder="Password 8-16:" minlength="8" maxlength="16">
+                <label class="custom-checkbox">
+                    <input type="checkbox" id="showpass-checkbox" onclick="showpass()">
+                    <span class="checkmark" id="showpass-checkmark" title="Show password"></span>
+                </label>
+            </div>
+            <br>
+            <!-- Input for the email -->
+            <input type="email" name="email" id="email" placeholder="Give your email:"><br>
+            <!-- Input for the phone -->
+            <input type="tel" name="phone" id="phone" maxlength="14" placeholder="Give your phone number:" oninput="formatPhone(this)"><br>
+            <!-- Input for the birth -->
+            <label for="birth">Birth:</label>
+            <input type="date" name="birth" id="birth" max="2006-12-31"><br>
+            <input type="submit" name="sub" value="Next">
+        </form>
+    </main>
+    <footer>
+        <a href="https://www.instagram.com"><img src="instagram.png" alt="Instagram"></a> | 
+        <a href="">Subscribe to newsletter</a>
+    </footer>
+</body>
+</html>
